@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Pages{% endblock %}
+{% block content %}
+<h1>Pages</h1>
+
+<form method="get">
+  <input type="text" name="q" placeholder="Buscar por título..." value="{{ request.GET.q }}">
+  <button type="submit">Buscar</button>
+</form>
+
+{% if pages %}
+  {% for p in pages %}
+    <div>
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.subtitle }}</p>
+      <small>{{ p.created_at|date:"d/m/Y H:i" }} - por {{ p.author.username }}</small><br>
+      <a href="{% url 'pages:detail' p.pk %}">Leer más</a>
+      {% if user.is_authenticated and user == p.author %}
+        | <a href="{% url 'pages:edit' p.pk %}">Editar</a>
+        | <a href="{% url 'pages:delete' p.pk %}">Borrar</a>
+      {% endif %}
+    </div>
+    <hr>
+  {% endfor %}
+{% else %}
+  <p>No hay páginas aún.</p>
+{% endif %}
+{% endblock %}

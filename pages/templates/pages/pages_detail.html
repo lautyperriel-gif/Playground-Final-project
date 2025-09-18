@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Detalle{% endblock %}
+{% block content %}
+<article>
+  <h1>{{ page.title }}</h1>
+  <h4>{{ page.subtitle }}</h4>
+  {% if page.image %}
+    <img src="{{ page.image.url }}" alt="{{ page.title }}" style="max-width:300px;">
+  {% endif %}
+  <div>{{ page.content|safe }}</div>
+  <p><small>Autor: {{ page.author.username }} - {{ page.created_at|date:"d/m/Y H:i" }}</small></p>
+</article>
+{% endblock %}
