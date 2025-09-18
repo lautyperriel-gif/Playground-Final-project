@@ -76,22 +76,10 @@ Es una aplicación web estilo blog desarrollada en **Python (Django)** con manej
 - `requirements.txt` incluye Django, Pillow, django-ckeditor y demás dependencias necesarias.  
 - Todos los modelos están registrados en el admin de Django.  
 
----
 
-## 🎥 Video demostración
-
-Se adjunta un video (máx. 10 min) mostrando:  
-1. Navegación por Home y About  
-2. Registro, login y logout de usuarios  
-3. Creación, edición, búsqueda y borrado de páginas  
-4. Perfil de usuario (avatar, bio, edición y cambio de password)  
-5. Mensajería entre usuarios  
-
----
 
 ## ⚠️ Nota sobre commits
 
 En el historial de commits puede aparecer el nombre **PascualCoudannes** debido a una configuración global previa de Git en la PC utilizada.  
-El desarrollo completo del proyecto corresponde a **Lautaro Perriel**.
 
 ---
