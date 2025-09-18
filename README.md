@@ -1,4 +1,4 @@
-# Playground Final Project (Django - Principiante)
+# Playground Final Project 
 
 ## Pasos
 ```bash
